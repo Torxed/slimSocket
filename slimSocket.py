@@ -1,5 +1,9 @@
 from socket import *
 from select import epoll, EPOLLIN, EPOLLOUT, EPOLLHUP
+
+def drop_privileges():
+	return True
+
 class slimIdentity():
 	def __init__(self, parent, socket, address=None, parsers={}):
 		self.parent = parent
