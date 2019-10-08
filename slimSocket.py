@@ -61,7 +61,7 @@ class slimIdentity():
 			for response in self.parsers[parser].parse(self, data, {}, self.socket.fileno(), self.address):
 				return response
 
-class slimSocket():
+class socket_serve():
 	def __init__(self, parsers={}, address='', port=1337):
 		self.sock = socket()
 		self.sock.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
